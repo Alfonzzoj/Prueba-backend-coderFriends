@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-6 mx-auto">
+    <div class="card mt-4 text-center">
+      <div class="card-header">
+        <h1 class="h4">
+
+        Bienvenido  {{this.user.nombre}}
+
+        </h1>
+ 
+      </div>
+        <img class="rounded-circle mx-auto d-block logo m-4" src="/img/logo.png" alt="Logo">
+      <div class="card-body">
+          <form action="/perfil-up/{{this.user.id}}" method="POST">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="Nombre" name="nombre" placeholder="Enter Nombre" value="{{this.user.nombre}}">
+                </div>
+                <div class="form-group">
+                    <label for="name">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Enter apellido" value="{{this.user.apellido}}">
+                </div>
+                <div class="form-group">
+                    <label for="name">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" value="{{this.user.usuario}}">
+                </div>
+                <div class="form-group">
+                    <label for="name">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Enter email" value="{{this.user.email}}">
+                </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            Actualizar 
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
